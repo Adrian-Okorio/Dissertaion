@@ -29,9 +29,9 @@ type(df)
 
 st.write(""" ### Data Analysis """)
 fig, axes = plt.subplots()
-axes[0].plot(df.infection_rate);
-axes[0].set_title('Original Series')
-plot_acf(df.infection_rate, ax=axes[1])
+#axes[0].plot(df.infection_rate);
+#axes[0].set_title('Original Series')
+#plot_acf(df.infection_rate, ax=axes[1])
 st.pyplot(fig)
 
 
