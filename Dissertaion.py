@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
 import streamlit as st
 
-from matplotlib.pyplot import plot , draw, show
+
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 plt.rcParams.update({'figure.figsize':(9,7), 'figure.dpi':120})
