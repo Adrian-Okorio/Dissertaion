@@ -21,7 +21,7 @@ st.write("""  Below is data that was extracted after the data mining steps
 1) Data Cleaning.
 2) Data Integration.
 3) Data Reduction.""")
-df = pd.read_csv("D:\Jupyter\data.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/Aredo-A/Dissertaion/main/data.csv")
 df
 type(df)
 
