@@ -3,7 +3,11 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
-
+primaryColor="#F63366"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#262730"
+font="sans serif"
 
 st.write(""" ## Malaria web  Application """)
 st.write("""  introduction statment """)
