@@ -8,14 +8,13 @@ from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 st.write(""" ## Malaria web  Application """)
 st.write("""  introduction statment """)
 
-
 st.write("""Table one contains the original dataset obtained from the MalairiaAtlas
 dataset, Click the button below to view the data set:""")
 if st.button('Original_Data'):
      original = pd.read_csv("https://raw.githubusercontent.com/Aredo-A/Dissertaion/main/original.csv")
      original
      type(original)
- st.write("""  imaage description of the most affected areas in udanda """)
+st.write("""  imaage description of the most affected areas in udanda """)
 st.write(""" data collected description""")
 st.image("https://raw.githubusercontent.com/Aredo-A/Dissertaion/main/diagram.jpg")
 
