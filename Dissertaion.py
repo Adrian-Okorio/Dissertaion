@@ -60,8 +60,8 @@ st.write(""" The null hypothesis of the ADF test is that the time series is non-
 significance level (0.05) then you reject the null hypothesis and infer that the time series is indeed stationary. """)
 
 result = adfuller(df.infection_rate.dropna())
-print('ADF Statistic: %f' % result[0])
-print('p-value: %f' % result[1])
+st.write('ADF Statistic: %f' % result[0])
+st.write('p-value: %f' % result[1])
 
 #---------------------------------------------------
 fig, axes = plt.subplots(1, 2, sharex=True)
