@@ -9,7 +9,15 @@ plt.rcParams.update({'figure.figsize':(9,7), 'figure.dpi':120})
 
 
 st.write(""" ## Malaria web  Application """)
-st.write("""  introduction statment """)
+st.write("""  The application uses ARIMA model to forecast a time series using the past Values.
+in this web app an arima model is built to forecast and test for seasnonality""")
+
+st.write("""An ARIMA model is characterized by 3 terms: p, d, q
+where,
+p is the order of the AR term
+q is the order of the MA term
+d is the number of differencing required to make the time series stationary""")
+
 
 st.write("""Table one contains the original dataset obtained from the MalairiaAtlas
 dataset, Click the button below to view the data set:""")
@@ -17,8 +25,8 @@ if st.button('Original_Data'):
      original = pd.read_csv("https://raw.githubusercontent.com/Aredo-A/Dissertaion/main/original.csv")
      original
      type(original)
-st.write("""  imaage description of the most affected areas in udanda """)
-st.write(""" data collected description""")
+#------st.write("""  imaage description of the most affected areas in udanda """)
+#------st.write(""" data collected description""")
 st.image("https://raw.githubusercontent.com/Aredo-A/Dissertaion/main/diagram.jpg")
 
 st.write("""  Below is data that was extracted after the data mining steps
@@ -31,6 +39,14 @@ df
 type(df)
 
 st.write(""" ### Data Analysis """)
+
+st.write("""Because, term ‘Auto Regressive’ in ARIMA means it is a linear regression model that uses its own lags as predictors.
+Linear regression models, as you know, work best when the predictors are not correlated and are independent of each other.
+The most common approach is to difference it. That is, subtract the previous value from the current value. Sometimes,
+depending on the complexity of the series, more than one differencing may be needed.""")
+
+st.write(""" A pure Auto Regressive (AR only) model is one where Yt depends only on its own lags. That is, Yt is a function of the ‘lags of Yt’s """)
+st.image("https://www.machinelearningplus.com/wp-content/uploads/2019/02/Equation-1-min.png")
 fig, axes = plt.subplots(1, 2, sharex=True)
 axes[0].plot(df.infection_rate);
 axes[0].set_title('Original Series')
