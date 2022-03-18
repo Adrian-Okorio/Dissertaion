@@ -47,6 +47,23 @@ depending on the complexity of the series, more than one differencing may be nee
 
 st.write(""" A pure Auto Regressive (AR only) model is one where Yt depends only on its own lags. That is, Yt is a function of the ‘lags of Yt’s """)
 st.image("https://www.machinelearningplus.com/wp-content/uploads/2019/02/Equation-1-min.png")
+
+st.write(""" Likewise a pure Moving Average (MA only) model is one where Yt depends only on the lagged forecast errors""")
+st.image("https://www.machinelearningplus.com/wp-content/uploads/2019/02/Equation-2-min.png")
+
+
+st.write(""" An ARIMA model is one where the time series was differenced at least once to make it stationary and you combine the AR and the MA terms.
+So the equation becomes:""")    
+st.image("https://www.machinelearningplus.com/wp-content/uploads/2019/02/Equation-4-min.png")
+
+st.write(""" The null hypothesis of the ADF test is that the time series is non-stationary. So, if the p-value of the test is less than the
+significance level (0.05) then you reject the null hypothesis and infer that the time series is indeed stationary. """)
+
+result = adfuller(df.infection_rate.dropna())
+print('ADF Statistic: %f' % result[0])
+print('p-value: %f' % result[1])
+
+#---------------------------------------------------
 fig, axes = plt.subplots(1, 2, sharex=True)
 axes[0].plot(df.infection_rate);
 axes[0].set_title('Original Series')
