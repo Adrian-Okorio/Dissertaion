@@ -8,7 +8,7 @@ plt.rcParams.update({'figure.figsize':(9,7), 'figure.dpi':120})
 
 
 
-st.write(""" ## Malaria web  Application """)
+st.write(""" # Malaria web  Application """)
 st.write("""  by 
 ### Okorio Adrian
 ### 18/U/23523/PS
