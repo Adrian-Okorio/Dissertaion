@@ -62,17 +62,14 @@ significance level (0.05) then you reject the null hypothesis and infer that the
 result = adfuller(df.infection_rate.dropna())
 st.write('*ADF Statistic*: %f' % result[0])
 st.write('*p-value*: %f' % result[1])
-|         |         | 
-| ------------- |:-------------:| 
-| st.write('*ADF Statistic*')    | st.write('%f' % result[0]) |
-| col 2 is      | centered      |  
-#---------------------------------------------------
+
+
 fig, axes = plt.subplots(1, 2, sharex=True)
 axes[0].plot(df.infection_rate);
 axes[0].set_title('Original Series')
 plot_acf(df.infection_rate, ax=axes[1])
 st.pyplot(fig)
-
+st.write(""" Since P-value is greater than the significance level, let’s difference the series and see how the autocorrelation plot looks like """)
 
 st.write("""  auto correlation description """)
 st.write(""" Description of the data and why use first and 
