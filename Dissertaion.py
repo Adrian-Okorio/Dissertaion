@@ -9,10 +9,10 @@ plt.rcParams.update({'figure.figsize':(9,7), 'figure.dpi':120})
 
 
 st.write(""" ## Malaria web  Application """)
-st.write(""" #### by 
-Okorio Adrian
-#### \n18/U/23523/PS
-#### \n1800723523""")
+st.write("""  by 
+### Okorio Adrian
+### 18/U/23523/PS
+### 1800723523""")
 st.write("""  The application uses ARIMA model to forecast a time series using the past Values.
 in this web app an arima model is built to forecast and test for seasnonality""")
 
