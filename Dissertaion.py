@@ -62,7 +62,10 @@ significance level (0.05) then you reject the null hypothesis and infer that the
 result = adfuller(df.infection_rate.dropna())
 st.write('*ADF Statistic*: %f' % result[0])
 st.write('*p-value*: %f' % result[1])
-
+| Tables        | Are           | 
+| ------------- |:-------------:| 
+| st.write('*ADF Statistic*')    | st.write('%f' % result[0]) |
+| col 2 is      | centered      |  
 #---------------------------------------------------
 fig, axes = plt.subplots(1, 2, sharex=True)
 axes[0].plot(df.infection_rate);
