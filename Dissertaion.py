@@ -71,9 +71,7 @@ plot_acf(df.infection_rate, ax=axes[1])
 st.pyplot(fig)
 st.write(""" Since P-value is greater than the significance level, let’s difference the series and see how the autocorrelation plot looks like """)
 
-st.write("""  auto correlation description """)
-st.write(""" Description of the data and why use first and 
-second order diffrencaition""")
+
 fig1, axes = plt.subplots(2, 2, sharex=True)
 # 1st Differencing
 axes[0, 0].plot(df.infection_rate.diff()); axes[0, 0].set_title('1st Order Differencing')
@@ -84,11 +82,13 @@ axes[1, 0].plot(df.infection_rate.diff().diff()); axes[1, 0].set_title('2nd Orde
 plot_acf(df.infection_rate.diff().diff().dropna(), ax=axes[1, 1])
 st.pyplot(fig1)
 
-st.write("""  identify if the model needs any AR terms""")
+st.write(""" identify if the model needs any AR terms""")
 st.write("""Partial autocorrelation of lag (k) of a series is the coefficient of that lag in the autoregression equation of Y.
 """)
 st.image("https://www.machinelearningplus.com/wp-content/uploads/2021/06/arima-equation.jpg")
 
+st.write(""" Any autocorrelation in a stationarized series can be rectified by adding enough AR terms. So,
+we initially take the order of AR term to be equal to as many lags that crosses the significance limit in the PACF plot.""")
 
 
 fig8, axes = plt.subplots(1, 2, sharex=True)
