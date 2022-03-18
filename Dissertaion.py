@@ -1,7 +1,10 @@
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
+from statsmodels.tsa.arima.model import ARIMA
+from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+plt.rcParams.update({'figure.figsize':(9,7), 'figure.dpi':120})
 
 
 
