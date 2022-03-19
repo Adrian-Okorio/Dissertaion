@@ -1,0 +1,13 @@
+month,month_n,examined,positive,infection_rate
+January,1,1775,386,21.75
+February,2,1504,208,13.83
+March,3,2051,841,41
+April,4,57,14,24.56
+May,5,4134,1920,46.44
+June,6,3724,1123,30.16
+July,7,2036,654,32.12
+August,8,3039,1285,42.28
+September,9,4644,1468,31.61
+October,10,4465,1571,35.18
+November,11,6816,1850,27.14
+December,12,8364,2111,25.24
