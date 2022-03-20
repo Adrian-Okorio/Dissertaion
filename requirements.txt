@@ -5,4 +5,4 @@ yfinance
 streamlit
 matplotlib
 statsmodels
-
+openpyxl
