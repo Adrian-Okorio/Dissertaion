@@ -11,8 +11,8 @@ st.write(""" # Malaria web  Application """)
 
 st.sidebar.header("Malaria web  Application", )
 st.sidebar.write("Designed by " "\n **Okorio Adrian**")
-st.sidebar.write("**18/U/23523/PS**")
-st.sidebar.write("**1800723523**")
+#st.sidebar.write("**18/U/23523/PS**")
+#st.sidebar.write("**1800723523**")
 
 st.sidebar.write("A Web Application supporting the  Dissertation Submitted to the School of "
                  "Statistics and Planning in Partial "
